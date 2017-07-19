@@ -4,7 +4,7 @@ public class FlyMovement implements Movement {
 
     public static final double movementSpeed = 200.0;
 
-    public void Move() {
-        System.out.println(String.format("Flying with movement speed %s km/h"));
+    public void move() {
+        System.out.println(String.format("Flying with movement speed %s km/h", movementSpeed));
     }
 }

@@ -4,7 +4,7 @@ public class RunMovement implements Movement {
 
     public static final double movementSpeed = 80.0;
 
-    public void Move() {
-        System.out.println(String.format("Run with movement speed %s km/h"));
+    public void move() {
+        System.out.println(String.format("Run with movement speed %s km/h", movementSpeed));
     }
 }
