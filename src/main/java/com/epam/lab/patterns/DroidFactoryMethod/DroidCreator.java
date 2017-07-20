@@ -3,11 +3,11 @@ package com.epam.lab.patterns.DroidFactoryMethod;
 /**
  * Abstract class of droid manufacturing factory
  */
-public abstract class DroidFactory {
+public abstract class DroidCreator {
 
     private String factoryName;
 
-    public DroidFactory(String factoryName) {
+    public DroidCreator(String factoryName) {
         this.factoryName = factoryName;
     }
 

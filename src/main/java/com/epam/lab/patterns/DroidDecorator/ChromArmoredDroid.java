@@ -8,7 +8,7 @@ public class ChromArmoredDroid extends ArmoredDroidDecorator {
     public static final double armorTypeCost = 20000.0;
 
     public ChromArmoredDroid(Droid droid) {
-        super(droid.droidInfo.concat(armorType), droid);
+        super(droid.getDroidInfo().concat(armorType), droid);
     }
 
     public double getCost() {
