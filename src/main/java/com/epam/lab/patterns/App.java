@@ -1,16 +1,20 @@
 package com.epam.lab.patterns;
 
 import com.epam.lab.patterns.CommandPatternMenu.*;
+import org.apache.log4j.Logger;
 
 import java.util.Scanner;
 
 public class App {
+
+    private static final Logger LOGGER = Logger.getLogger(App.class);
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String menuChoice = EnumMenuData.MENU_TITLE.getOptionNumber();
         MenuControl menuControl = new MenuControl();
         setMenuControlCommands(menuControl);
-        while (!menuChoice.equalsIgnoreCase(EnumMenuData.FOURTH_OPTION.getOptionNumber())) {
+        while (!menuChoice.equalsIgnoreCase(EnumMenuData.SIX_OPTION.getOptionNumber())) {
             printMenuSelectionOptions();
             menuChoice = scanner.next();
             if (menuChoice.equalsIgnoreCase(EnumMenuData.FIRST_OPTION.getOptionNumber())) {
@@ -25,6 +29,7 @@ public class App {
                 menuControl.runCommand(EnumMenuData.FIFE_OPTION.getOptionNumber());
             }  else if (menuChoice.equalsIgnoreCase(EnumMenuData.SIX_OPTION.getOptionNumber())) {
                 menuControl.runCommand(EnumMenuData.SIX_OPTION.getOptionNumber());
+                LOGGER.info("Program exit.");
             } else {
                 menuControl.runCommand(EnumMenuData.MENU_TITLE.getOptionNumber());
             }
@@ -47,5 +52,8 @@ public class App {
         System.out.println(EnumMenuData.SECOND_OPTION.getOptionTitle());
         System.out.println(EnumMenuData.THIRD_OPTION.getOptionTitle());
         System.out.println(EnumMenuData.FOURTH_OPTION.getOptionTitle());
+        System.out.println(EnumMenuData.FIFE_OPTION.getOptionTitle());
+        System.out.println(EnumMenuData.SIX_OPTION.getOptionTitle());
+        System.out.print("Please enter some choice number : ");
     }
 }

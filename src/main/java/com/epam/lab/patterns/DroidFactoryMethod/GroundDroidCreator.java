@@ -10,6 +10,6 @@ public class GroundDroidCreator extends DroidCreator {
     }
 
     public Droid create(int id) {
-        return new FlyDroid(id);
+        return new GroundDroid(id);
     }
 }

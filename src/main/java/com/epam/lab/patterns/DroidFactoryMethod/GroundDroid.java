@@ -12,6 +12,6 @@ public class GroundDroid extends Droid {
 
     @Override
     public String toString() {
-        return String.format("Ground droid: id = %1$d, hit points = %2$d, armor = %3$d", id, hitPoints, armorValue);
+        return String.format("Ground droid: id = %1$d, hit points = %2$.2f, armor = %3$d", id, hitPoints, armorValue);
     }
 }
